@@ -1,1 +1,0 @@
-Controller finished. Inspect LOCATION_SUMMARY.csv and warnings. Completion does not imply publication validity.
