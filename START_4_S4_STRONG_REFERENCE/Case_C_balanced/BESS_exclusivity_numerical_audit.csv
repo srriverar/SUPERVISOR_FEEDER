@@ -1,0 +1,2 @@
+model_exclusivity_limit_pu2,solved_max_normalized_product_pu2,numerical_excess_above_model_limit_pu2,postsolve_numerical_audit_ceiling_pu2,audit_pass,note
+1e-08,1.9999997996558737e-08,9.999997996558736e-09,1e-07,True,The OPF mathematical constraint remains <=1e-8. The separate audit ceiling only classifies finite-precision solver output.

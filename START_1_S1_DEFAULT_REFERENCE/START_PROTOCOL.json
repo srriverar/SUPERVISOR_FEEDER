@@ -1,0 +1,14 @@
+{
+  "protocol_id": "FIVE_DETERMINISTIC_INITIALIZATION_STARTS_V1",
+  "start_count": 5,
+  "start_names": [
+    "S1_DEFAULT",
+    "S2_LIGHT",
+    "S3_MEDIUM",
+    "S4_STRONG",
+    "S5_WIDE"
+  ],
+  "active_start_index": 1,
+  "active_start_name": "S1_DEFAULT",
+  "five_start_compliance": true
+}

@@ -1,0 +1,2 @@
+guard_name,total_available_PV_energy_kWh,total_curtailed_PV_energy_kWh,whole_horizon_curtailment_fraction,threshold_fraction,max_single_interval_curtailment_fraction,max_single_interval_time_min,delta_t_h,note
+PV whole-horizon anti-collapse guard,1750.272607407957,48.73728892692286,0.0278455417291251,0.95,0.9970121564658089,300,0.5,"Maximum single interval is reported, not used for rejection."

@@ -1,0 +1,54 @@
+Pyomo NL writer low-memory patch ACTIVE: variable bounds and initial values are streamed through lazy mappings.
+
+===== BUILDING BASE OPENDSS CIRCUIT =====
+Generating to C:\Users\MUNEERA\AppData\Local\Temp\gen_py\3.11\8BFDE413-245A-4514-B151-B16DCC243796x0x1x0.py
+Building definitions from type library...
+Generating...
+Importing module
+Initial OpenDSS solution converged
+
+===== EXTRACTING NETWORK DATA =====
+
+===== WRITING OPF DATA FILES =====
+
+===== VOLTAGE INITIALISATION =====
+
+===== BUILDING LOAD AND CENTRAL PV PROFILES =====
+CentralBESS_sizing_mode  CentralSolar_peak_available_W  CentralSolar_available_energy_Wh_over_horizon CentralBESS_bus  CentralBESS_E_rating_Wh  CentralBESS_P_ch_max_W  CentralBESS_P_dis_max_W  CentralBESS_Q_max_var  CentralBESS_eta_ch  CentralBESS_eta_dis  CentralBESS_SOC_init  CentralBESS_SOC_min  CentralBESS_SOC_max  CentralBESS_SOC_final  CentralBESS_per_phase_power_limit_fraction  CentralBESS_per_phase_q_limit_fraction               Objective_mode  Battery_throughput_penalty  Net_injection_smoothing_penalty                                                                    Objective_equation  CentralBESS_use_binary_mode  CentralBESS_enforce_night_only_discharge  CentralBESS_night_pv_to_demand_ratio_threshold                                                                                            Main_fairness_note
+           user_defined                  235990.308754                                   1.750273e+06    feeder2_1818                1000000.0                250000.0                 250000.0               250000.0                 0.9                  0.9                   0.5                  0.1                  1.0                    0.5                                    0.333333                                0.333333 one_stage_weighted_power_sum                      0.0001                              0.0 sum_t[(PV_available-PV_command)+1e-3*|Q_PV|] + 1e-4*sum_t(BESS_charge+BESS_discharge)                        False                                      True                                        0.000001 Same total BESS kW/kWh/SOC/bus/objective in balanced and per-phase cases; only phase-control freedom changes.
+
+===== ACTIVE BESS INITIAL GUESS (INITIAL POINT ONLY) =====
+Charge: 80.000 kW total at [630, 660, 690, 810, 840, 870]; discharge: 64.800 kW total at [1260, 1290, 1320, 1350, 1380, 1440]; terminal SOC=0.500000.
+These values are NOT fixed; Knitro is free to change them.
+
+===== BUILDING 48-INTERVAL OPENDSS QSTS FEASIBLE SEED =====
+Generating to C:\Users\MUNEERA\AppData\Local\Temp\gen_py\3.11\8BFDE413-245A-4514-B151-B16DCC243796x0x1x0.py
+Building definitions from type library...
+Generating...
+Importing module
+t=  30 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=  60 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=  90 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 120 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 150 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 180 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 210 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 240 min: feasible PV seed    0.803 /    0.803 kW (alpha=1.00000)
+t= 270 min: feasible PV seed    3.348 /    3.348 kW (alpha=1.00000)
+t= 300 min: feasible PV seed    7.612 /    7.612 kW (alpha=1.00000)
+t= 330 min: feasible PV seed   16.215 /   16.215 kW (alpha=1.00000)
+t= 360 min: feasible PV seed   32.041 /   32.041 kW (alpha=1.00000)
+t= 390 min: feasible PV seed   67.541 /   67.541 kW (alpha=1.00000)
+t= 420 min: feasible PV seed   61.173 /   81.236 kW (alpha=0.75303)
+t= 450 min: feasible PV seed   62.918 /  139.783 kW (alpha=0.45011)
+t= 480 min: feasible PV seed   68.801 /  137.807 kW (alpha=0.49926)
+t= 510 min: feasible PV seed   74.177 /  157.786 kW (alpha=0.47011)
+t= 540 min: feasible PV seed   73.623 /  172.443 kW (alpha=0.42694)
+t= 570 min: feasible PV seed   60.543 /  185.006 kW (alpha=0.32725)
+t= 600 min: feasible PV seed   54.559 /  119.416 kW (alpha=0.45688)
+Traceback (most recent call last):
+  File "C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\_isolated_project\_LOCATION_WORKER.py", line 1373, in <module>
+    build_qsts_feasible_seed()
+  File "C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\_isolated_project\_LOCATION_WORKER.py", line 1240, in build_qsts_feasible_seed
+    raise RuntimeError(
+RuntimeError: Load-only OpenDSS state is not feasible at t=630 min. The C/D optimization must not start.

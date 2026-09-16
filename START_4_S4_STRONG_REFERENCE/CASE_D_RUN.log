@@ -1,0 +1,281 @@
+Pyomo NL writer low-memory patch ACTIVE: variable bounds and initial values are streamed through lazy mappings.
+
+===== BUILDING BASE OPENDSS CIRCUIT =====
+Generating to C:\Users\MUNEERA\AppData\Local\Temp\gen_py\3.11\8BFDE413-245A-4514-B151-B16DCC243796x0x1x0.py
+Building definitions from type library...
+Generating...
+Importing module
+Initial OpenDSS solution converged
+
+===== EXTRACTING NETWORK DATA =====
+
+===== WRITING OPF DATA FILES =====
+
+===== VOLTAGE INITIALISATION =====
+
+===== BUILDING LOAD AND CENTRAL PV PROFILES =====
+CentralBESS_sizing_mode  CentralSolar_peak_available_W  CentralSolar_available_energy_Wh_over_horizon CentralBESS_bus  CentralBESS_E_rating_Wh  CentralBESS_P_ch_max_W  CentralBESS_P_dis_max_W  CentralBESS_Q_max_var  CentralBESS_eta_ch  CentralBESS_eta_dis  CentralBESS_SOC_init  CentralBESS_SOC_min  CentralBESS_SOC_max  CentralBESS_SOC_final  CentralBESS_per_phase_power_limit_fraction  CentralBESS_per_phase_q_limit_fraction               Objective_mode  Battery_throughput_penalty  Net_injection_smoothing_penalty                                                                    Objective_equation  CentralBESS_use_binary_mode  CentralBESS_enforce_night_only_discharge  CentralBESS_night_pv_to_demand_ratio_threshold                                                                                            Main_fairness_note
+           user_defined                  235990.308754                                   1.750273e+06    feeder2_1818                1000000.0                250000.0                 250000.0               250000.0                 0.9                  0.9                   0.5                  0.1                  1.0                    0.5                                    0.333333                                0.333333 one_stage_weighted_power_sum                      0.0001                              0.0 sum_t[(PV_available-PV_command)+1e-3*|Q_PV|] + 1e-4*sum_t(BESS_charge+BESS_discharge)                        False                                      True                                        0.000001 Same total BESS kW/kWh/SOC/bus/objective in balanced and per-phase cases; only phase-control freedom changes.
+
+===== ACTIVE BESS INITIAL GUESS (INITIAL POINT ONLY) =====
+Charge: 40.000 kW total at [630, 660, 690, 810]; discharge: 32.400 kW total at [1260, 1290, 1320, 1380]; terminal SOC=0.500000.
+These values are NOT fixed; Knitro is free to change them.
+
+===== BUILDING 48-INTERVAL OPENDSS QSTS FEASIBLE SEED =====
+Generating to C:\Users\MUNEERA\AppData\Local\Temp\gen_py\3.11\8BFDE413-245A-4514-B151-B16DCC243796x0x1x0.py
+Building definitions from type library...
+Generating...
+Importing module
+t=  30 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=  60 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=  90 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 120 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 150 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 180 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 210 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t= 240 min: feasible PV seed    0.803 /    0.803 kW (alpha=1.00000)
+t= 270 min: feasible PV seed    3.348 /    3.348 kW (alpha=1.00000)
+t= 300 min: feasible PV seed    7.612 /    7.612 kW (alpha=1.00000)
+t= 330 min: feasible PV seed   16.215 /   16.215 kW (alpha=1.00000)
+t= 360 min: feasible PV seed   32.041 /   32.041 kW (alpha=1.00000)
+t= 390 min: feasible PV seed   67.541 /   67.541 kW (alpha=1.00000)
+t= 420 min: feasible PV seed   61.173 /   81.236 kW (alpha=0.75303)
+t= 450 min: feasible PV seed   62.918 /  139.783 kW (alpha=0.45011)
+t= 480 min: feasible PV seed   68.801 /  137.807 kW (alpha=0.49926)
+t= 510 min: feasible PV seed   74.177 /  157.786 kW (alpha=0.47011)
+t= 540 min: feasible PV seed   73.623 /  172.443 kW (alpha=0.42694)
+t= 570 min: feasible PV seed   60.543 /  185.006 kW (alpha=0.32725)
+t= 600 min: feasible PV seed   54.559 /  119.416 kW (alpha=0.45688)
+t= 630 min: feasible PV seed  114.884 /  229.746 kW (alpha=0.50005)
+t= 660 min: feasible PV seed  114.265 /  235.990 kW (alpha=0.48420)
+t= 690 min: feasible PV seed  114.604 /  232.588 kW (alpha=0.49273)
+t= 720 min: feasible PV seed   75.091 /  137.663 kW (alpha=0.54547)
+t= 750 min: feasible PV seed   70.433 /   86.507 kW (alpha=0.81419)
+t= 780 min: feasible PV seed   63.436 /   63.436 kW (alpha=1.00000)
+t= 810 min: feasible PV seed   96.132 /  220.843 kW (alpha=0.43529)
+t= 840 min: feasible PV seed   60.254 /  219.015 kW (alpha=0.27512)
+t= 870 min: feasible PV seed   48.310 /  209.105 kW (alpha=0.23103)
+t= 900 min: feasible PV seed   74.876 /  169.590 kW (alpha=0.44151)
+t= 930 min: feasible PV seed   75.102 /  108.386 kW (alpha=0.69291)
+t= 960 min: feasible PV seed   57.887 /  167.972 kW (alpha=0.34463)
+t= 990 min: feasible PV seed   64.659 /  124.580 kW (alpha=0.51901)
+t=1020 min: feasible PV seed   58.868 /   58.868 kW (alpha=1.00000)
+t=1050 min: feasible PV seed   21.386 /   21.386 kW (alpha=1.00000)
+t=1080 min: feasible PV seed   35.726 /   35.726 kW (alpha=1.00000)
+t=1110 min: feasible PV seed   34.880 /   34.880 kW (alpha=1.00000)
+t=1140 min: feasible PV seed   14.676 /   14.676 kW (alpha=1.00000)
+t=1170 min: feasible PV seed    6.557 /    6.557 kW (alpha=1.00000)
+t=1200 min: feasible PV seed    1.479 /    1.479 kW (alpha=1.00000)
+t=1230 min: feasible PV seed    0.514 /    0.514 kW (alpha=1.00000)
+t=1260 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1290 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1320 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1350 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1380 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1410 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+t=1440 min: feasible PV seed    0.000 /    0.000 kW (alpha=0.00000)
+Saved QSTS_FEASIBLE_SEED.csv
+Working results directory: C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE
+
+FINAL MODEL LOCKS
+BESS = 1000 kWh / 250 kW; S = P = 250 kVA
+Central-PV Q: bidirectional
+BESS Q: bidirectional per phase
+Same-phase charge/discharge exclusivity: ENABLED
+Objective: sum[(PV_av-PV_cmd)+1e-3*|Q_PV|] + 1e-4*sum(BESS throughput power)
+Initialization: QSTS seed for C; accepted Case-C full state warm-starts D
+Energy quantities are calculated after solving for reporting
+Solver: IPOPT/MUMPS final production profile
+Each case is executed in its own Python process by RUN_ALL_FINAL.py
+
+SIZE POINT OVERRIDE
+Energy = 1000 kWh
+Power  = 250 kW
+Mode   = per_phase
+Objective penalty = 1e-4 (frozen)
+
+================================================================================
+RUNNING Case_D_per_phase scenario= D pv= central bess= True control_mode= per_phase size= E1000kWh_P250kW
+================================================================================
+Initial point: 48-interval OpenDSS QSTS feasible seed with the configured active BESS initial guess and SOC = 0.50.
+Case D warm start loaded from matching Case C: 100176 values across 13 components.
+Scaled same-phase exclusivity active: (P_charge/P_charge_max)*(P_discharge/P_discharge_max) <= 1e-08.
+
+Largest initial constraint residuals:
+                                  Constraint        Body  Lower       Upper  Raw_violation  Relative_violation
+CentralBESS_night_only_discharge_con[1,1050]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+CentralBESS_night_only_discharge_con[1,1140]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+CentralBESS_night_only_discharge_con[2,1050]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+CentralBESS_night_only_discharge_con[2,1140]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+CentralBESS_night_only_discharge_con[3,1050]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+CentralBESS_night_only_discharge_con[3,1140]     0.00010    NaN     0.00000         0.0001        9.999929e-05
+ CentralBESS_night_only_discharge_con[1,390]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[2,390]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[3,390]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[1,330]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[2,330]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[3,330]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[1,360]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[2,360]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[3,360]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[1,780]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[2,780]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+ CentralBESS_night_only_discharge_con[3,780]     0.00010    NaN     0.00000         0.0001        9.999767e-05
+           CentralSolar_P_available_con[390] 67541.17115    NaN 67541.17105         0.0001        1.480489e-09
+           CentralSolar_P_available_con[330] 16214.67308    NaN 16214.67298         0.0001        6.166882e-09
+Initial weighted objective (raw W-sum): 141742.951347
+
+===== ONE-STAGE WEIGHTED C/D OPTIMIZATION =====
+Objective: sum curtailed PV power + 1e-3*sum|Q_PV| + 0.0001 × sum BESS throughput power
+Wall-clock limit: none (solver tolerances determine acceptance)
+
+========================================================
+FINAL SHOWLEE IPOPT PRODUCTION PROFILE
+========================================================
+Linear solver          : MUMPS
+Hessian                : limited-memory
+Scaling                : gradient-based
+tol                    : 1e-5
+constr_viol_tol        : 1e-4
+ARTIFICIAL TIME LIMIT  : NONE
+========================================================
+
+Ipopt 3.14.19: linear_solver=mumps
+nlp_scaling_method=gradient-based
+hessian_approximation=limited-memory
+tol=1e-05
+acceptable_tol=0.0001
+constr_viol_tol=0.0001
+acceptable_constr_viol_tol=0.001
+acceptable_iter=10
+max_iter=10000
+mumps_mem_percent=3000
+print_level=5
+
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+This is Ipopt version 3.14.19, running with linear solver MUMPS 5.8.2.
+
+Number of nonzeros in equality constraint Jacobian...:  1046825
+Number of nonzeros in inequality constraint Jacobian.:   364882
+Number of nonzeros in Lagrangian Hessian.............:        0
+
+Total number of variables............................:    92208
+                     variables with only lower bounds:       48
+                variables with lower and upper bounds:      576
+                     variables with only upper bounds:        0
+Total number of equality constraints.................:    91632
+Total number of inequality constraints...............:    68866
+        inequality constraints with only lower bounds:    22754
+   inequality constraints with lower and upper bounds:        0
+        inequality constraints with only upper bounds:    46112
+
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+   0  1.4174273e+05 1.00e-02 3.20e+00   0.0 0.00e+00    -  0.00e+00 0.00e+00   0
+   1  1.4177892e+05 7.27e-03 2.02e+00  -2.8 2.36e+03    -  7.87e-01 5.49e-01h  1
+   2  1.3847699e+05 4.15e-01 1.06e+01  -3.5 3.15e+04    -  1.07e-02 1.12e-01f  1
+   3  1.3844229e+05 4.14e-01 1.17e+02  -3.5 3.30e+04    -  1.07e-01 1.10e-03f  1
+   4  1.3832471e+05 4.13e-01 3.34e+03  -3.5 3.51e+04    -  8.77e-02 3.16e-03f  1
+   5  1.3832471e+05 4.13e-01 1.35e+06  -3.5 9.39e+02    -  1.23e-02 3.14e-05h  1
+   6  1.3707027e+05 4.33e-01 1.26e+06  -3.6 3.79e+04    -  6.38e-02 2.55e-02f  1
+   7  1.3651893e+05 4.32e-01 1.20e+06  -3.6 6.03e+04    -  5.05e-02 8.97e-03f  1
+   8  1.3558652e+05 4.37e-01 1.13e+06  -3.6 6.86e+04    -  6.19e-02 1.51e-02f  1
+   9  1.3463834e+05 4.43e-01 1.05e+06  -3.6 7.43e+04    -  7.83e-02 1.52e-02f  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  10  1.3350949e+05 4.54e-01 9.23e+05  -3.7 8.35e+04    -  1.30e-01 1.80e-02f  1
+  11  1.3222734e+05 4.72e-01 7.87e+05  -3.7 1.03e+05    -  1.65e-01 2.03e-02f  1
+  12  1.3091495e+05 4.93e-01 6.08e+05  -3.8 1.20e+05    -  2.70e-01 2.07e-02f  1
+  13  1.2873875e+05 1.82e+00 5.68e+05  -3.9 1.27e+05    -  7.65e-02 3.22e-02f  1
+  14  1.2871654e+05 1.82e+00 5.67e+05   0.6 1.10e+05    -  1.39e-03 3.61e-04f  1
+  15  1.2760198e+05 2.68e+00 5.63e+05   0.1 1.93e+05    -  3.15e-03 1.14e-02f  1
+  16  1.2681209e+05 3.56e+00 5.57e+05   0.6 1.45e+05    -  1.43e-02 9.84e-03f  1
+  17  1.2606767e+05 4.69e+00 5.50e+05   0.8 1.25e+05    -  2.14e-02 1.04e-02f  1
+  18  1.2456063e+05 8.77e+00 5.35e+05   0.8 1.17e+05    -  3.84e-02 2.25e-02f  1
+  19  1.2403315e+05 8.70e+00 5.24e+05   0.7 1.35e+05    -  9.86e-02 9.65e-03f  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  20  1.2218667e+05 8.43e+00 5.00e+05   0.6 1.14e+05    -  1.15e-01 3.57e-02f  1
+  21  1.1833735e+05 2.18e+01 4.54e+05   0.5 9.65e+04    -  2.44e-01 8.30e-02f  1
+  22  1.1581516e+05 2.42e+01 4.23e+05   0.4 4.83e+04    -  3.70e-01 7.91e-02f  1
+  23  1.1076057e+05 3.24e+01 3.38e+05   0.4 2.29e+04    -  4.79e-01 2.24e-01f  1
+  24  1.0995751e+05 3.05e+01 3.22e+05   0.8 1.82e+05    -  1.56e-01 6.12e-02f  1
+  25  1.0879956e+05 2.69e+01 2.94e+05   0.6 3.35e+04    -  3.54e-01 1.17e-01f  1
+  26  1.0537204e+05 2.08e+01 2.25e+05  -0.2 1.62e+04    -  6.45e-01 2.38e-01f  1
+  27  1.0242196e+05 1.47e+01 1.44e+05  -0.1 9.74e+03    -  3.45e-01 3.60e-01f  1
+  28  1.0022183e+05 8.41e+00 7.59e+04  -0.2 4.48e+03    -  7.87e-01 4.79e-01f  1
+  29  9.8852745e+04 4.40e+00 3.32e+04  -0.9 2.37e+03    -  9.50e-01 5.38e-01f  1
+iter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+  30  9.7894730e+04 4.60e-01 1.52e+03  -0.8 1.23e+03    -  1.00e+00 9.53e-01f  1
+  31  9.7832791e+04 1.82e-01 6.26e+03  -1.4 4.61e+02    -  1.00e+00 6.09e-01f  1
+  32  9.7790211e+04 4.33e-02 1.38e+03  -2.3 2.83e+02    -  1.00e+00 8.31e-01f  1
+  33  9.7781611e+04 6.91e-03 6.03e+02  -2.9 2.21e+02    -  1.00e+00 8.48e-01f  1
+  34  9.7780668e+04 4.26e-03 1.66e+03  -4.0 1.90e+02    -  1.00e+00 3.95e-01f  1
+  35  9.7779691e+04 4.48e-04 2.30e+02  -3.6 1.98e+01    -  1.00e+00 9.00e-01h  1
+  36  9.7779561e+04 2.49e-04 1.70e+00  -3.8 8.40e+00    -  1.00e+00 1.00e+00h  1
+  37  9.7779494e+04 2.36e-05 5.17e-01  -4.4 3.75e+00    -  1.00e+00 1.00e+00f  1
+  38  9.7779472e+04 5.98e-06 2.38e-01  -5.5 1.86e+00    -  1.00e+00 1.00e+00f  1
+  39  9.7779470e+04 1.04e-07 9.06e-07  -7.2 2.39e-01    -  1.00e+00 1.00e+00h  1
+
+Number of Iterations....: 39
+
+                                   (scaled)                 (unscaled)
+Objective...............:   9.7779470050302887e+04    9.7779470050302887e+04
+Dual infeasibility......:   9.0555038558150260e-07    9.0555038558150260e-07
+Constraint violation....:   4.1284356978517589e-08    1.0428630048409104e-07
+Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
+Complementarity.........:   9.2472827670052234e-08    9.2472827670052234e-08
+Overall NLP error.......:   6.1682812004485241e-07    9.0555038558150260e-07
+
+
+Number of objective function evaluations             = 40
+Number of objective gradient evaluations             = 40
+Number of equality constraint evaluations            = 40
+Number of inequality constraint evaluations          = 40
+Number of equality constraint Jacobian evaluations   = 40
+Number of inequality constraint Jacobian evaluations = 40
+Number of Lagrangian Hessian evaluations             = 0
+Total seconds in IPOPT                               = 128.769
+
+EXIT: Optimal Solution Found.
+
+===== STRICT SOLVER CERTIFICATE =====
+Solver status: ok
+Termination condition: optimal
+Solver message: Ipopt 3.14.19\x3a Optimal Solution Found
+=====================================
+
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\_isolated_project\_LOCATION_WORKER.py:3433: RuntimeWarning: invalid value encountered in divide
+  pv_curtailment_kW / pv_available_kW,
+Accepted BESS activity audit: throughput=1524.472 kWh, SOC swing=0.7625 p.u., curtailment=2.78%, objective improvement=31.0163%.
+Extracting OPF results for Case_D_per_phase
+
+===== BESS EXCLUSIVITY NUMERICAL AUDIT =====
+Model limit             : 1e-08
+Solved maximum product  : 1.999558796224468e-08
+Numerical excess        : 9.995587962244681e-09
+Audit numerical ceiling : 1e-07
+Audit result            : PASS
+=============================================
+
+Running OpenDSS validation for Case_D_per_phase
+Generating to C:\Users\MUNEERA\AppData\Local\Temp\gen_py\3.11\8BFDE413-245A-4514-B151-B16DCC243796x0x1x0.py
+Building definitions from type library...
+Generating...
+Importing module
+Complete weighted-objective workbook:
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE\Case_D_per_phase/P2_LEXICOGRAPHIC_COMPLETE_RESULTS.xlsx
+Complete 3x3 dashboard:
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE\Case_D_per_phase/P2_ONE_STAGE_WEIGHTED_SUPERVISOR_3X3.png
+Saved clean P/Q command plots:
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE\Case_D_per_phase/PLOT_02_BESS_P_command_by_phase.png
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE\Case_D_per_phase/PLOT_03_BESS_Q_command_by_phase.png
+C:\Users\MUNEERA\AppData\Local\Temp\F2REF_1b5if8kx\J1LOC_FIVE_STARTS_20260916_001325_739479\START_4_S4_STRONG_REFERENCE\Case_D_per_phase/PLOT_04_CONFERENCE_2x2_P_Q_SOC_commands.png
+
+===== CASE COMPLETE =====
+Case_D_per_phase
+       case_name scenario_id PV_architecture  BESS_enabled      size_label control_mode  BESS_energy_kWh  BESS_power_kW  BESS_C_rate               Objective_mode solver_status termination_condition  objective_value_solver_raw_W_sum  objective_value_normalized  objective_power_base_W  objective_value  objective_value_raw_W_sum  initial_objective_raw_W_sum  objective_improvement_fraction  PV_available_energy_kWh  PV_curtailment_fraction  BESS_SOC_swing_pu  dead_BESS_rejection_guard_passed  Battery_throughput_penalty  Night_only_discharge_gate_enabled  Night_PV_to_demand_ratio_threshold  Net_injection_smoothing_penalty                                                                          Objective_equation  Time_sim_interval_minutes  Number_of_time_steps  delta_t_hours_from_time_grid  Cold_start  Warm_started_from_Case_C  Manual_initialization_in_main_script  Forced_no_discharge_time_min  PV_command_energy_kWh  PV_curtailment_energy_kWh  PV_curtailment_percent  PV_whole_horizon_curtailment_fraction_guard  PV_max_single_interval_curtailment_fraction  PV_max_single_interval_time_min  PV_curtailment_reporting_interval_h  BESS_charge_energy_kWh  BESS_discharge_energy_kWh  BESS_throughput_kWh  BESS_equivalent_full_cycles_over_horizon  BESS_cycle_limit_enabled  BESS_cycle_limit_over_horizon  BESS_cycle_limit_margin  BESS_SOC_min_observed  BESS_SOC_max_observed  BESS_DOD_observed_pu  BESS_initial_SOC  BESS_last_state_SOC  BESS_terminal_SOC_target  BESS_terminal_SOC_estimate  BESS_terminal_SOC_error  BESS_max_exclusivity_product_pu2  BESS_cross_phase_opposite_direction_interval_count  BESS_SOC_balance_max_abs_error_pu  Voltage_violation_rows_OPF_or_DSS  Max_voltage_violation_pu_OPF_or_DSS  Total_voltage_violation_pu_OPF_or_DSS  Max_OPF_network_voltage_range_pu  Max_DSS_network_voltage_range_pu  Max_OPF_VUF2_percent  Max_DSS_VUF2_percent  Max_OPF_VUF0_percent  Max_DSS_VUF0_percent  OPF_total_line_losses_kWh  Max_OPF_line_loading_percent  Max_DSS_line_loading_percent
+Case_D_per_phase           D         central          True E1000kWh_P250kW    per_phase           1000.0          250.0         0.25 one_stage_weighted_power_sum            ok               optimal                       97779.47005                    0.414337           235990.308754     97779.472325               97779.472325                141742.951347                        0.310163              1750.272607                 0.027846             0.7625                              True                      0.0001                               True                            0.000001                              0.0 sum_t[(PV_available-PV_command)+1e-3*|Q_PV|] + 0.0001*sum_t(P_BESS_charge+P_BESS_discharge)                         30                    48                           0.5       False                      True                                  True                           NaN             1701.53532                  48.737289                2.784554                                     0.027846                                     0.997012                              300                                  0.5                847.2223                 677.250054          1524.472353                                  0.762236                      True                            1.0                 0.237764               0.187016               0.949516                0.7625               0.5             0.551977                       0.5                        0.51                     0.01                      1.999559e-08                                                  14                       4.440892e-16                                 38                             0.000006                               0.000042                           0.03579                          0.035786              0.579366              0.579381              1.325549              1.325583                  34.734286                    100.000001                    100.018295
