@@ -1,0 +1,146 @@
+<<<<<<< HEAD
+{
+  "created": "2026-09-16T00:13:27.404116",
+  "source_project": "C:\\Users\\MUNEERA\\AppData\\Local\\Temp\\F2REF_1b5if8kx",
+  "python": "C:\\Users\\MUNEERA\\anaconda3\\envs\\dsopf2\\python.exe",
+  "PV_bus": "feeder2_1818",
+  "energy_kWh": 1000,
+  "power_kW": 250,
+  "locations": [
+    [
+      "REFERENCE",
+      "feeder2_1818"
+    ]
+  ],
+  "starts": [
+    {
+      "name": "S1_DEFAULT",
+      "charge_kW": 20.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.25,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S2_LIGHT",
+      "charge_kW": 5.0,
+      "intervals": 2,
+      "high_pv_fraction": 0.3,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S3_MEDIUM",
+      "charge_kW": 10.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.2,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S4_STRONG",
+      "charge_kW": 40.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.2,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S5_WIDE",
+      "charge_kW": 80.0,
+      "intervals": 6,
+      "high_pv_fraction": 0.15,
+      "low_pv_fraction": 0.05
+    }
+  ],
+  "start_protocol_id": "FIVE_DETERMINISTIC_INITIALIZATION_STARTS_V1",
+  "start_protocol_names": [
+    "S1_DEFAULT",
+    "S2_LIGHT",
+    "S3_MEDIUM",
+    "S4_STRONG",
+    "S5_WIDE"
+  ],
+  "start_protocol_count": 5,
+  "five_start_compliance": true,
+  "protocol": "Five deterministic initialization-only starts per location; Case D only from its matching accepted Case C.",
+  "minutes_per_case": 60,
+  "policy": "Original constraints, SOC, objective, signs, and operating policy. Starts affect initialization only; screens warn only.",
+  "engine_sha256": "f4531a01d1947c03255ee7b41a24b0eb924fcf4bdcf7de1cc308449645d64ff7",
+  "model_sha256": "acc004fb12de55e22c535a8519d304a6169ef88fae615e5f7f076c5af3f6836a",
+  "required_import_tree": [
+    "OPF_model/Main_OpenDSS_to_OPF.py",
+    "OPF_model/Packages/"
+  ],
+  "output_isolation": "Fresh timestamped folder; no existing project output is opened for writing.",
+  "publication_status": "All results diagnostic, require physical and numerical review."
+=======
+{
+  "created": "2026-09-16T00:13:27.404116",
+  "source_project": "C:\\Users\\MUNEERA\\AppData\\Local\\Temp\\F2REF_1b5if8kx",
+  "python": "C:\\Users\\MUNEERA\\anaconda3\\envs\\dsopf2\\python.exe",
+  "PV_bus": "feeder2_1818",
+  "energy_kWh": 1000,
+  "power_kW": 250,
+  "locations": [
+    [
+      "REFERENCE",
+      "feeder2_1818"
+    ]
+  ],
+  "starts": [
+    {
+      "name": "S1_DEFAULT",
+      "charge_kW": 20.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.25,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S2_LIGHT",
+      "charge_kW": 5.0,
+      "intervals": 2,
+      "high_pv_fraction": 0.3,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S3_MEDIUM",
+      "charge_kW": 10.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.2,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S4_STRONG",
+      "charge_kW": 40.0,
+      "intervals": 4,
+      "high_pv_fraction": 0.2,
+      "low_pv_fraction": 0.05
+    },
+    {
+      "name": "S5_WIDE",
+      "charge_kW": 80.0,
+      "intervals": 6,
+      "high_pv_fraction": 0.15,
+      "low_pv_fraction": 0.05
+    }
+  ],
+  "start_protocol_id": "FIVE_DETERMINISTIC_INITIALIZATION_STARTS_V1",
+  "start_protocol_names": [
+    "S1_DEFAULT",
+    "S2_LIGHT",
+    "S3_MEDIUM",
+    "S4_STRONG",
+    "S5_WIDE"
+  ],
+  "start_protocol_count": 5,
+  "five_start_compliance": true,
+  "protocol": "Five deterministic initialization-only starts per location; Case D only from its matching accepted Case C.",
+  "minutes_per_case": 60,
+  "policy": "Original constraints, SOC, objective, signs, and operating policy. Starts affect initialization only; screens warn only.",
+  "engine_sha256": "f4531a01d1947c03255ee7b41a24b0eb924fcf4bdcf7de1cc308449645d64ff7",
+  "model_sha256": "acc004fb12de55e22c535a8519d304a6169ef88fae615e5f7f076c5af3f6836a",
+  "required_import_tree": [
+    "OPF_model/Main_OpenDSS_to_OPF.py",
+    "OPF_model/Packages/"
+  ],
+  "output_isolation": "Fresh timestamped folder; no existing project output is opened for writing.",
+  "publication_status": "All results diagnostic, require physical and numerical review."
+>>>>>>> cabae69ae82f9358ca22befecb381e6eccddc8f0
+}

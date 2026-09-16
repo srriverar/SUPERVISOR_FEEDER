@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Controller finished. Inspect LOCATION_SUMMARY.csv and warnings. Completion does not imply publication validity.
+=======
+Controller finished. Inspect LOCATION_SUMMARY.csv and warnings. Completion does not imply publication validity.
+>>>>>>> cabae69ae82f9358ca22befecb381e6eccddc8f0
